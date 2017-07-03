@@ -5,7 +5,11 @@ function render() {
   const MOUNT_ROOT = document.getElementById('root');
 
   ReactDOM.render(
-    <h1>Hello My First React</h1>,
+    <ul>
+      <li>Pen</li>
+      <li>Pine apple</li>
+      <li>Apple</li>
+    </ul>,
     MOUNT_ROOT
   );
 }
