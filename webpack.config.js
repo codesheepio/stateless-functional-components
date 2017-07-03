@@ -1,8 +1,13 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: [
+      'babel-polyfill',
+      'react-hot-loader/patch',
+      './src/index.js'
+    ]
   },
   output: {
     filename: '[name].js',
@@ -16,13 +21,24 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'stage-0', 'react']
+            presets: [
+              ['env', { modules: false }],
+              'stage-0',
+              'react'
+            ],
+            plugins: [
+              'react-hot-loader/babel'
+            ]
           }
         }
       }
     ]
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
+    hot: true,
     port: 9000
   }
 };

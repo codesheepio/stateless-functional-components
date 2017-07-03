@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader'
+
+import App from './App';
+
 
 function render() {
   const MOUNT_ROOT = document.getElementById('root');
 
   ReactDOM.render(
-    <ul>
-      <li>Pen</li>
-      <li>Pine apple</li>
-      <li>Apple</li>
-    </ul>,
+    <AppContainer>
+      <App />
+    </AppContainer>,
     MOUNT_ROOT
   );
 }
 
 render();
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    render();
+  });
+}
