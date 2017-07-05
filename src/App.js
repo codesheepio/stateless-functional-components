@@ -6,8 +6,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Hello name="Goku" />
-        <Hello name="Gohan" />
+        <Hello name="Goku" >
+          Meteor Strike
+        </Hello>
+        <Hello name="Gohan" >
+          Kame Hame Ha
+        </Hello>
       </div>
     );
   }
