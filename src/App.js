@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Clicker from './Clicker';
+import Hello from './Hello';
 
 function App() {
   return (
-    <div>
-      <h1>Clicker</h1>
-      <Clicker />
-    </div>
+    <Hello name="Tarzan">
+      Yeeha
+    </Hello>
   );
 }
 
