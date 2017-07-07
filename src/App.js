@@ -4,9 +4,7 @@ import Hello from './Hello';
 
 function App() {
   return (
-    <Hello name="Tarzan">
-      Yeeha
-    </Hello>
+    <Hello name="Tarzan"/>
   );
 }
 

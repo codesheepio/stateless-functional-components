@@ -13,5 +13,8 @@ Hello.propTypes = {
   name: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
+Hello.defaultProps = {
+  children: 'How are you?'
+};
 
 export default Hello;
