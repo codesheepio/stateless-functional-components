@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Counter from './Counter';
+import Button from './Button';
+
 class Clicker extends React.Component {
   constructor() {
     super();
@@ -17,11 +20,11 @@ class Clicker extends React.Component {
 
     return (
       <div>
-        <h3>{ counter }</h3>
-        <button onClick={this.setCounter(counter + 1)}>+</button>
-        <button onClick={this.setCounter(counter + 7)}>+7</button>
-        <button onClick={this.setCounter(counter + 17)}>+17</button>
-        <button onClick={this.setCounter(0)}>Reset</button>
+        <Counter value={ counter } />
+        <Button onClick={this.setCounter(counter + 1)}>+</Button>
+        <Button onClick={this.setCounter(counter + 7)}>+7</Button>
+        <Button onClick={this.setCounter(counter + 17)}>+17</Button>
+        <Button onClick={this.setCounter(0)}>Reset</Button>
       </div>
     )
   }

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Hello from './Hello';
+import Clicker from './Clicker';
 
 function App() {
   return (
-    <Hello name="Tarzan"/>
+    <Clicker />
   );
 }
 
