@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Counter(props) {
+function Counter({ value }) {
   return (
     <h3>
-      { props.value }
+      { value }
     </h3>
   )
 }
