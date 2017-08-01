@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button(props) {
+function Button({ children, onClick }) {
   return (
-    <button onClick={props.onClick} style={{ width: 60, color: '#00e' }}>
-      { props.children }
+    <button onClick={onClick} style={{ width: 60, color: '#00e' }}>
+      { children }
     </button>
   )
 }
